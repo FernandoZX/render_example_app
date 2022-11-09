@@ -2,6 +2,7 @@ databases:
   - name: render_example_7_postgresql
     databaseName: render_example_7s
     ipAllowList: []
+    plan: free
 
 services:
   - type: web
@@ -9,6 +10,7 @@ services:
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exce rails s
+    plan: free
     envVars:
       - key: RAILS_MASTER_KEY
         sync: false
